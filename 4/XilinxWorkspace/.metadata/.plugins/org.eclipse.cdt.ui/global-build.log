@@ -1,0 +1,30 @@
+16:17:33 **** Build of configuration Debug for project Lab4-1194 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/asm.S
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/asm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/asm.d" -MT"src/asm.o" -o "src/asm.o" "../src/asm.S"
+Finished building: ../src/asm.S
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: Lab4-1194.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "Lab4-1194.elf"  ./src/asm.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: Lab4-1194.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size Lab4-1194.elf  |tee "Lab4-1194.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19024	   1144	  22568	  42736	   a6f0	Lab4-1194.elf
+Finished building: Lab4-1194.elf.size
+ 
+16:17:44 **** Incremental Build of configuration Debug for project Lab4-1194 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for `main-build'.
